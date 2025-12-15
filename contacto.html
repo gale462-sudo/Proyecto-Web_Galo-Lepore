@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Tinta y Potrero</title>
+    <link rel="icon" type="image/png" href="img/faviconsinfondo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="img/LOGO.png" alt="Logo de Tinta y Potrero" class="logo">
+            <span class="logo-text">Tinta y Potrero</span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cronicas.html">Crónicas</a></li>
+                <li><a href="sobre.html">Sobre la revista</a></li>
+                <li><a href="suscripcion.html">Suscripción</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <h2>Hablemos de fútbol</h2>
+            <p>¿Tenés una historia que merece ser contada? ¿Querés comentarnos algo sobre nuestras crónicas? Estamos para escucharte.</p>
+        </section>
+
+        <div class="contacto-wrapper">
+            
+            <div class="contacto-main">
+                <div class="form-card-contacto">
+                    <h3>Envíanos un mensaje</h3>
+                    
+                    <form action="confirmacion-CONT.html">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" name="asunto" placeholder="¿De qué se trata?" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Tu mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribí acá tu consulta, sugerencia o idea..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-full">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+
+            <aside class="contacto-sidebar">
+                
+                <div class="sidebar-block">
+                    <h4>Otras vías de contacto</h4>
+                    <ul class="contacto-lista">
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>redaccion@tintaypotrero.com</span>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>+54 9 11 1234 5678</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Buenos Aires, Argentina</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-block nota-colaboradores">
+                    <h4>¿Sos cronista?</h4>
+                    <p>Siempre buscamos nuevas plumas. Si tenés una crónica narrativa o una investigación en curso, mandanos un correo con el asunto "COLABORACIÓN".</p>
+                </div>
+
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="footer-avanzado">
+        <div class="footer-grid">
+            <div class="footer-columna logo-footer">
+                <h3>Tinta y Potrero</h3>
+                <p>Periodismo narrativo de profundidad sobre el fútbol argentino.</p>
+            </div>
+            <div class="footer-columna">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="cronicas.html">Crónicas</a></li>
+                    <li><a href="sobre.html">Sobre la revista</a></li>
+                    <li><a href="suscripcion.html">Suscripción</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <hr>
+            <p>© 2025 Tinta y Potrero. Todos los derechos reservados. | <a href="privacidad.html">Política de privacidad</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
