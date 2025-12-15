@@ -1,0 +1,419 @@
+/*1. CONFIGURACIÓN GENERAL */
+html {
+    scroll-behavior: smooth;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f7f5; 
+    color: #111; 
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+    font-family: 'Georgia', serif;
+    color: #003366; 
+    margin-bottom: 15px;
+}
+
+/* Estilos para Citas Destacadas */
+blockquote {
+    font-family: 'Georgia', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #444;
+    border-left: 4px solid #8a1c26; 
+    margin: 30px 0;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/*2. ENCABEZADO*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+    background-color: #ffffff;
+}
+
+/* Logo */
+.logo-container { display: flex; align-items: center; }
+.logo { height: 50px; width: auto; }
+.logo-text { font-weight: 600; font-size: 25px; margin-left: 10px; }
+.logo h1 { font-size: 1.5rem; }
+
+/* Menú de Navegación */
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+/* Efecto hover menú */
+nav a:hover, nav a.active {
+    color: #003366;
+}
+nav a.active { border-bottom: 2px solid #003366; }
+
+/* 3. BOTONES*/
+.btn, .btn-full, .btn-destacado {
+    background-color: #003366;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn:hover, .btn-full:hover, .btn-destacado:hover {
+    background-color: #002244; 
+}
+
+.btn-full { width: 100%; padding: 15px; font-size: 1.1rem; }
+
+/* Títulos de introducción */
+.page-intro { text-align: center; padding: 60px 40px 20px 40px; }
+.page-intro h2 { font-size: 3rem; color: #111; }
+.page-intro p { font-size: 1.15rem; color: #555; max-width: 700px; margin: 0 auto; }
+
+/*4. PORTADA PRINCIPAL */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/PotreroFONDO.jpg); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 180px 40px;
+    text-align: center;
+    color: #fff;
+}
+.hero h2 {
+    font-size: 3rem;
+    color: #fff; 
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+.hero p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    opacity: 0.95;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* 5. NOTICIA DESTACADA */
+.destacado { padding: 80px 40px; }
+.destacado article {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.destacado .content { flex: 1; padding-right: 40px; }
+.destacado .imagen-destacado { flex: 1; max-width: 45%; object-fit: cover; }
+
+.destacado .etiqueta-destacado {
+    font-size: 0.8rem;
+    color: darkred;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.destacado h3 { font-size: 2.2rem; line-height: 1.1; margin-bottom: 20px; }
+.destacado .resumen { font-size: 1.1rem; line-height: 1.5; margin-bottom: 25px; }
+.destacado .meta-articulo { font-size: 0.9em; color: #555; margin-bottom: 30px; }
+
+/* 6. GRILLA DE NOTICIAS*/
+.cronicas { padding-top: 40px; padding-bottom: 80px; max-width: 1000px; margin: 0 auto; }
+.cronicas h2 { font-size: 1.8rem; margin-bottom: 30px; display: inline-block; }
+.ver-todas { float: right; text-decoration: none; color: #003366; font-weight: bold; margin-top: 10px; }
+
+.grid-cronicas {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.grid-cronicas article {
+    background-color: #ffffff;
+    padding-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-cronicas article:hover { 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); 
+    transform: translateY(-5px);
+}
+
+.grid-cronicas img { width: 100%; height: 200px; object-fit: cover; margin-bottom: 15px; }
+
+.grid-cronicas .tag {
+    font-size: 0.75rem;
+    color: darkred;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+.grid-cronicas h3 { font-size: 1.3rem; line-height: 1.25; margin: 0 20px 10px 20px; color: #111; }
+.grid-cronicas .excerpt { font-size: 0.95rem; color: #444; margin: 0 20px 15px 20px; flex-grow: 1; }
+.grid-cronicas .meta-card { font-size: 0.8rem; color: #777; margin-left: 20px; margin-bottom: 20px; }
+.grid-cronicas .link-card { color: #003366; text-decoration: none; font-weight: bold; margin-left: 20px; display: block; margin-bottom: 5px; }
+
+/* 7. BLOQUES DE TEXTO */
+.editorial-vision {
+    padding: 80px 40px;
+    background-color: #f8f7f5;
+    color: #111;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+.content-editorial {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+}
+.editorial-vision h3 { font-size: 2.5rem; color: #003366; margin-bottom: 20px; }
+.editorial-vision p { font-size: 1.1rem; line-height: 1.7; margin-bottom: 15px; }
+
+.articulo-contenido p:first-of-type::first-letter {
+    float: left;
+    font-size: 3.5rem;
+    line-height: 0.8;
+    font-weight: bold;
+    color: #003366;
+    margin-right: 10px;
+    font-family: 'Georgia', serif;
+}
+
+/* Caja azul grande de suscripción */
+.suscripcion-grande {
+    background-color: #003366;
+    color: #fff;
+    padding: 60px 40px;
+    text-align: center;
+    margin: 40px auto;
+    max-width: 900px;
+}
+.suscripcion-grande h3 { color: #fff; font-size: 2rem; }
+.suscripcion-grande .btn { background-color: #f8f7f5; color: #003366; }
+.suscripcion-grande .btn:hover { background-color: #ffffff; }
+
+/* 8. PÁGINA "SOBRE LA REVISTA */
+.container-foto-grande { width: 100%; max-width: 1000px; margin: 0 auto 60px auto; padding: 0 40px; }
+.foto-full { width: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.contenido-texto { max-width: 800px; margin: 0 auto; padding: 0 40px 60px 40px; }
+.contenido-texto h2 { font-size: 2.2rem; }
+.contenido-texto p { font-size: 1.15rem; line-height: 1.8; color: #333; margin-bottom: 20px; }
+
+.significado-bloque { margin-top: 50px; border-top: 1px solid #ddd; padding-top: 40px; }
+.significado-bloque h3 { font-size: 1.8rem; }
+.definicion { margin-bottom: 25px; }
+.definicion strong { color: #111; font-size: 1.2rem; }
+
+/* Grilla de Valores */
+.valores-section { background-color: #f0efe9; padding: 80px 40px; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; }
+.valores-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1000px; margin: 0 auto; }
+.valor-card {
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.icon-box { min-width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; color: #fff; font-size: 1.5rem; }
+.icon-box.azul { background-color: #0d283f; }
+.icon-box.rojo { background-color: #8a1c26; }
+.valor-texto h4 { font-size: 1.3rem; margin-bottom: 10px; }
+.valor-texto p { font-size: 0.95rem; line-height: 1.5; color: #555; }
+
+.equipo-section { text-align: center; max-width: 800px; margin: 0 auto; padding: 80px 40px; }
+.equipo-section h3 { font-size: 2.5rem; margin-bottom: 30px; }
+.intro-equipo { font-style: italic; font-size: 1.2rem; color: #111; margin-bottom: 20px; }
+
+/* 9. FORMULARIOS Y CONTACTO */
+.suscripcion-wrapper, .contacto-wrapper {
+    display: flex; max-width: 1000px; margin: 0 auto 80px auto; padding: 0 40px; gap: 60px; align-items: flex-start;
+}
+.columna-beneficios { flex: 1; padding-top: 20px; }
+.columna-beneficios h3 { font-size: 1.8rem; }
+.columna-beneficios p { font-size: 1.1rem; color: #444; margin-bottom: 30px; }
+
+/* Listas con iconos */
+.lista-beneficios li, .contacto-lista li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.lista-beneficios i, .contacto-lista i {
+    color: #8a1c26; 
+    font-size: 1.2rem;
+    margin-right: 15px;
+    margin-top: 4px;
+}
+
+.cita-suscripcion { background-color: #f0efe9; padding: 20px; border-left: 4px solid #003366; font-style: italic; color: #555; font-size: 0.95rem; }
+.cita-suscripcion span { display: block; margin-top: 10px; font-weight: bold; font-style: normal; color: #003366; font-size: 0.85rem; }
+
+/* Cajas de texto (Inputs) */
+.columna-formulario { flex: 1; max-width: 450px; }
+.form-card, .form-card-contacto {
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-radius: 2px;
+}
+.form-card { border-top: 5px solid #003366; }
+.form-card-contacto { box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+
+.form-header { text-align: center; margin-bottom: 30px; }
+.form-header h4 { font-size: 1.5rem; color: #111; margin-bottom: 5px; }
+.form-header p { font-size: 0.9rem; color: #777; }
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-weight: bold; font-size: 0.9rem; margin-bottom: 8px; color: #333; }
+.form-group input, .form-group textarea {
+    width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 3px; font-size: 1rem; font-family: inherit; transition: border-color 0.3s;
+}
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: #003366; background-color: #fcfcfc; }
+.form-group textarea { resize: vertical; }
+
+.form-group-check { display: flex; align-items: center; margin-bottom: 25px; font-size: 0.85rem; }
+.form-group-check input { margin-right: 10px; }
+.form-group-check a { color: #003366; text-decoration: underline; }
+.form-footer-text { text-align: center; font-size: 0.8rem; color: #999; margin-top: 15px; }
+
+/* Estilos de la página Contacto */
+.contacto-main { flex: 2; }
+.form-row { display: flex; gap: 20px; }
+.form-row .form-group { flex: 1; }
+.contacto-sidebar { flex: 1; padding-top: 10px; }
+.sidebar-block { margin-bottom: 40px; }
+.sidebar-block h4 { font-size: 1.1rem; font-weight: bold; color: #111; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid #ddd; padding-bottom: 10px; display: inline-block; }
+.sidebar-text { font-size: 0.95rem; color: #555; margin-bottom: 15px; }
+
+.nota-colaboradores { background-color: #eef2f5; padding: 20px; border-radius: 4px; }
+.nota-colaboradores h4 { border-bottom: none; padding-bottom: 0; margin-bottom: 10px; color: #003366; }
+.nota-colaboradores p { font-size: 0.9rem; color: #444; }
+
+/*10. PIE DE PÁGINA */
+.footer-avanzado { background-color: #0d283f; color: #f8f7f5; padding: 50px 40px 20px 40px; font-size: 0.95rem; margin-top: 40px; }
+.footer-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
+.footer-columna h3, .footer-columna h4 { font-weight: 400; margin-bottom: 20px; font-size: 1.4rem; color: #ffffff; }
+.footer-columna h4 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+.footer-columna ul { list-style: none; padding: 0; }
+.footer-columna li { margin-bottom: 10px; }
+.footer-columna a { color: #c7d2d8; text-decoration: none; transition: color 0.3s; }
+.footer-columna a:hover { color: #ffffff; }
+
+.footer-legal { max-width: 1000px; margin: 0 auto; text-align: center; }
+.footer-legal hr { border: none; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 20px 0; }
+.footer-legal p { font-size: 0.8rem; color: #c7d2d8; }
+.footer-legal a { color: #c7d2d8; text-decoration: underline; }
+
+/* 11. VISTA PARA CELULARES */
+@media (max-width: 768px) {
+    header { flex-direction: column; gap: 15px; }
+    nav ul { flex-wrap: wrap; justify-content: center; }
+    
+    .grid-cronicas { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    
+    .destacado article { flex-direction: column; }
+    .destacado .content { padding-right: 0; margin-bottom: 20px; }
+    .destacado .imagen-destacado { max-width: 100%; }
+    
+    .valores-grid { grid-template-columns: 1fr; }
+    
+    .suscripcion-wrapper, .contacto-wrapper { flex-direction: column; gap: 40px; }
+    .columna-formulario, .contacto-main, .contacto-sidebar { width: 100%; max-width: 100%; }
+    .form-card, .form-card-contacto { padding: 30px 20px; }
+    .form-row { flex-direction: column; gap: 0; }
+}
+
+/* BANNER DE COOKIES*/
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0d283f;
+    color: #fff;
+    padding: 15px 20px;
+    z-index: 9999;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    display: none;
+    font-family: Arial, sans-serif;
+}
+
+.cookie-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cookie-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    flex: 1;
+}
+
+.btn-cookie {
+    background-color: #fff;
+    color: #0d283f;
+    border: none;
+    padding: 8px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+.btn-cookie:hover {
+    background-color: #f0f0f0;
+}
+
+/* Ajuste del banner para celulares */
+@media (max-width: 768px) {
+    .cookie-content {
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
